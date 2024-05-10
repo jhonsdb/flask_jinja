@@ -1,0 +1,21 @@
+th,th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.clock-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#clock{
+    font-size: 5rem;
+    font-weight: 1000;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
+    color: aqua;
+}

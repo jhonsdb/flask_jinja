@@ -1,0 +1,31 @@
+{% extends './base.html'%}
+
+{%block title%}mimebros{%endblock%}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+    <h1>Miembros</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombres</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for persona in personas%}
+                <tr>
+                    <th>{{loop.index}}</th>
+                    <th>{{persona}}</th>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+</div>
+
+{% endblock%}
