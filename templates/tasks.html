@@ -5,12 +5,21 @@
 {% block body %}
 <div class="container">
  
- <!--    <div class="row">
+   <div class="row">
         <div class="col-med-4 offset-md-4 my-auto">
             <div class="card">
                 <div class="card_header">
-                    <input type="text" placeholder="tarea">
-                    <button>agregar</button>
+                    <form action="">
+                        <div class="form_group">
+                        <input name="content" type="text" placeholder="tarea" class="form-control" autofocus>
+                        </div>
+                        <input type="button" value="" class="btn btn-primary btn-block">
+                    </form>
+                    
+                </div>
+                <div class="car_body">
+                   
+                       
                 </div>
                 
             </div>
@@ -18,19 +27,9 @@
     </div>
 </div>
 
-<div class="grid gap-3">
-    <input type="text" name="" id="">   
-    <input type="radio" name="" id="" checked>
-    <input type="radio" name="" id="" checked>
-       
-    </div> -->
 
-    <div class="grid gap-3">
-        <div class="p-2 g-col-6">Grid item 1</div>
-        <div class="p-2 g-col-6">Grid item 2</div>
-        <div class="p-2 g-col-6">Grid item 3</div>
-        <div class="p-2 g-col-6">Grid item 4</div>
-      </div>
+
+   
 
 {% endblock%}
 
