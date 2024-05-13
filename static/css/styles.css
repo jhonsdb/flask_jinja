@@ -20,3 +20,9 @@ th,th{
     color: aqua;
 }
 
+.body{color:black}
+
+.done{
+    text-decoration: line-through;
+    color: #cfcfcfcf;
+}

@@ -22,14 +22,15 @@
                     
                 </div>
                 <div class="car_body">
-                 <!--   <ul>
+                   <ul class="list-group">
                     {% for task in tasks %}
-                    <li>
-                       {task.content}
-
+                    <li class="list-group-item">
+                       <span class="{% if task.done%}done{%endif%}">{{task.content}}</span>
+                       <a href="/done/{{task.id}}" class="btn btn-success btn-sm">Hecho</a>
+                       <a href="/delete/{{task.id}}" class="btn btn-danger btn-sm">Borrar</a>
                     </li>
                     {%endfor%}
-                   </ul> -->
+                   </ul> 
                        
                 </div>
                 
