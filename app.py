@@ -1,28 +1,30 @@
 from flask import Flask, render_template, request,redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
+from flask_cors import CORS
 
-# Initialize the Flask app
+# inicializar flask
 app = Flask(__name__)
+CORS(app) #habilitamos cors para todas las rutas.
 
-# Ensure the 'database' directory exists
+# asegurarse que exista database
 db_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'database')
 os.makedirs(db_dir, exist_ok=True)
 
-# Update the database URI to an absolute path
+# actualizar la uri de la base de datos a una ruta absoluta.
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(db_dir, "tasks.db")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Initialize the SQLAlchemy object
+# inicializamos el objeto sqlalchemy
 db = SQLAlchemy(app)
 
-# Declare the Task model
+# declaramos nuestro modelo task
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200))
     done = db.Column(db.Boolean)
 
-# Create all tables
+# creamos todas las tablas.
 with app.app_context():
     db.create_all()
 
