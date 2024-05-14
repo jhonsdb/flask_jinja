@@ -1,4 +1,5 @@
 {% extends './base.html'%} {% block body %}
+<<<<<<< HEAD
 <form class="form">
   <div class="flex-column">
     <label>Correo electrónico </label>
@@ -132,6 +133,63 @@
           </g>
         </g>
       </svg>
+=======
+<section class="container">
+  <header>Formulario de Registro</header>
+  <form class="form" action="#">
+      <div class="input-box">
+          <label>Nombre completo</label>
+          <input required="" placeholder="Nombre y apellidos" type="text">
+      </div>
+      <div class="column">
+          <div class="input-box">
+            <label>Número de teléfono</label>
+            <input required="" placeholder="Ingresa número telefónico" type="tel">
+          </div>
+          <div class="input-box">
+            <label>Fecha de nacimiento</label>
+            <input required="" placeholder="Ingresa fecha de nacimiento" type="date">
+          </div>
+      </div>
+      <div class="gender-box">
+        <label>Género</label>
+        <div class="gender-option">
+          <div class="gender">
+            <input name="gender" id="check-male" type="radio" value="Masculino">
+            <label for="check-male">Hombre</label>
+          </div>
+          <div class="gender">
+            <input name="gender" id="check-female" type="radio" value="Femenino">
+            <label for="check-female">Mujer</label>
+          </div>
+          <div class="gender">
+            <input name="gender" id="check-other" type="radio" value="Prefiero no decirlo">
+            <label for="check-other">Prefiero no decirlo</label>
+          </div>
+        </div>
+      </div>
+      <div class="input-box address">
+        <label>Dirección</label>
+        <input required="" placeholder="Introduce la dirección postal" type="text">
+        <div class="column">
+          <div class="select-box">
+            <select>
+              <option hidden="">País</option>
+              <option>Alemania</option>
+              <option>Argentina</option>
+              <option>España</option>
+              <option>Colombia</option>
+              <option>Japón</option>
+              <option>Venezuela</option>
+            </select>
+          </div>
+        <input required="" placeholder="Introduce tu ciudad" type="text">
+        </div>
+      </div>
+      <button>Enviar</button>
+  </form>
+</section>
+>>>>>>> main
 
       Apple
     </button>
@@ -139,6 +197,7 @@
 </form>
 
 <style>
+<<<<<<< HEAD
   body {
     background-color: rgb(0, 0, 0);
   }
@@ -261,6 +320,122 @@
   .btn:hover {
     border: 1px solid #2d79f3;
   }
+=======
+  .container {
+  justify-content: center;
+  position: relative;
+  max-width: 600px;
+  width: 95%;
+  background: #FCEDDA;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container header {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container .form {
+  margin-top: 15px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.input-box label {
+  color: #000;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #808080;
+  margin-top: 5px;
+  border: 1px solid #EE4E34;
+  border-radius: 6px;
+  padding: 0 15px;
+  background: #FCEDDA;
+}
+
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .gender-box {
+  margin-top: 10px;
+}
+
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .gender {
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: #EE4E34;
+}
+
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+
+.gender label {
+  color: #000;
+}
+
+.address :where(input, .select-box) {
+  margin-top: 10px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #808080;
+  font-size: 1rem;
+  background: #FCEDDA;
+}
+
+.form button {
+  height: 40px;
+  width: 100%;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #EE4E34;
+}
+
+.form button:hover {
+  background: #EE3E34;
+}
+>>>>>>> main
 </style>
 
 <script src="/static/js/form.js"></script>
