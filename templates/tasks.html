@@ -3,7 +3,7 @@
 {%block title%}index{%endblock%}
 
 {% block body %}
-<main class="container p-4">
+<main class="container ">
     <h1 class="display-4 text-center mt-4">Tasks App</h1>
 
  
@@ -22,14 +22,15 @@
                     
                 </div>
                 <div class="car_body">
-                 <!--   <ul>
-                    {% for task in tasks%}
-                    <li>
-                       {task.content}
-
+                   <ul class="list-group">
+                    {% for task in tasks %}
+                    <li class="list-group-item">
+                       <span class="{% if task.done%}done{%endif%}">{{task.content}}</span>
+                       <a href="/done/{{task.id}}" class="btn btn-success btn-sm">Hecho</a>
+                       <a href="/delete/{{task.id}}" class="btn btn-danger btn-sm">Borrar</a>
                     </li>
                     {%endfor%}
-                   </ul> -->
+                   </ul> 
                        
                 </div>
                 
